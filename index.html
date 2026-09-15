@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luenza | Sua Loja de Tecnologia Premium</title>
+    <meta name="description" content="Luenza - Produtos de tecnologia selecionados para si. Qualidade Premium, preços justos e entregas rápidas em Luanda.">
+    <link rel="stylesheet" href="styles.css?v=6">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <style>
+        body { margin: 0; font-family: 'Inter', Arial, sans-serif; background: #0b0d13; color: #f1f4fb; }
+        html[data-theme="light"] body { background: #eceef5; color: #171b28; }
+        h1, h2, h3, h4 { font-family: 'Space Grotesk', 'Outfit', Arial, sans-serif; }
+    </style>
+    <script>
+        try { document.documentElement.setAttribute('data-theme', localStorage.getItem('luenza_theme') || 'dark'); } catch (e) {}
+    </script>
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="container header-content">
+            <a href="index.html" class="brand">
+                <img src="assets/logo.jpg" alt="Luenza Logo" class="logo-img">
+                <span class="brand-name">LUENZA<span style="color:var(--brand);-webkit-text-fill-color:var(--brand)">.</span></span>
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html" class="active">Início</a>
+                <a href="#categorias">Categorias</a>
+                <a href="#precos">Preços</a>
+                <a href="produtos.html">Loja</a>
+                <a href="#contactos">Contactos</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                    <i class="ph ph-sun icon-sun"></i>
+                    <i class="ph ph-moon icon-moon"></i>
+                </button>
+                <button class="cart-btn" id="openCartBtn" aria-label="Abrir carrinho">
+                    <i class="ph ph-shopping-cart"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <div class="nav-items">
+            <a href="index.html" class="nav-item active">
+                <i class="ph ph-house"></i>
+                <span>Início</span>
+            </a>
+            <a href="produtos.html" class="nav-item">
+                <i class="ph ph-storefront"></i>
+                <span>Loja</span>
+            </a>
+            <a href="#" class="nav-item" id="mobileCartBtn">
+                <div class="cart-icon-wrapper">
+                    <i class="ph ph-shopping-cart"></i>
+                    <span class="cart-badge mobile-badge" id="mobileCartBadge">0</span>
+                </div>
+                <span>Carrinho</span>
+            </a>
+            <a href="#contactos" class="nav-item">
+                <i class="ph ph-headset"></i>
+                <span>Ajuda</span>
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-text">
+                    <div class="hero-eyebrow"><i class="ph ph-lightning"></i> Loja Oficial Luenza</div>
+                    <h1>Setup Premium, <span class="grad">Preço de Amigo.</span></h1>
+                    <p>Áudio, gaming, smartwatches e acessórios escolhidos a dedo. Monta a tua encomenda no site e finaliza direto no WhatsApp — entrega rápida em Luanda.</p>
+                    <div class="hero-ctas">
+                        <a href="produtos.html" class="btn btn-primary">Ver Produtos <i class="ph ph-arrow-right"></i></a>
+                        <a href="#precos" class="btn btn-ghost"><i class="ph ph-receipt"></i> Ver Preços</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div><strong>500+</strong><span>Clientes satisfeitos</span></div>
+                        <div><strong>4.9 ★</strong><span>Classificação média</span></div>
+                        <div><strong>16+</strong><span>Produtos premium</span></div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-ring"></div>
+                    <div class="float-card float-1">
+                        <img src="assets/Screenshot_20260915-182037.jpg" alt="Fones ANC">
+                        <span>Fones ANC/ENC</span>
+                        <strong>9.500 Kz</strong>
+                    </div>
+                    <div class="float-card float-2">
+                        <img src="assets/Screenshot_20260915-182033.jpg" alt="Smartwatch T900">
+                        <span>Smartwatch T900</span>
+                        <strong>10.000 Kz</strong>
+                    </div>
+                    <div class="float-card float-3">
+                        <div class="pf-i"><i class="ph ph-game-controller"></i></div>
+                        <span>Comando PS4</span>
+                        <strong>13.500 Kz</strong>
+                    </div>
+                    <div class="float-card float-4">
+                        <div class="pf-i"><i class="ph ph-battery-charging"></i></div>
+                        <span>Carregador 33W</span>
+                        <strong>3.000 Kz</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features / Trust Strip -->
+        <div class="features-strip">
+            <div class="container">
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="fi"><i class="ph ph-truck"></i></div>
+                        <div><strong>Entrega Rápida</strong><span>Luanda e arredores</span></div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="fi"><i class="ph ph-shield-check"></i></div>
+                        <div><strong>Qualidade Garantida</strong><span>Produtos verificados</span></div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="fi"><i class="ph ph-whatsapp-logo"></i></div>
+                        <div><strong>Suporte WhatsApp</strong><span>Atendimento direto</span></div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="fi"><i class="ph ph-cash-register"></i></div>
+                        <div><strong>Encomenda Simples</strong><span>Site ao WhatsApp</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categories -->
+        <section id="categorias" class="section categories-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Explora por categoria</span>
+                    <h2 class="section-title">Encontra o que precisas</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="categories-grid">
+                    <a href="produtos.html?cat=audio" class="category-card">
+                        <span class="cc-count">8 produtos</span>
+                        <div class="cc-icon"><i class="ph-fill ph-headphones"></i></div>
+                        <h3>Áudio</h3>
+                        <p>Fones Bluetooth, auriculares e AirPods com som premium.</p>
+                        <div class="cc-arrow"><i class="ph ph-arrow-up-right"></i></div>
+                    </a>
+                    <a href="produtos.html?cat=gaming" class="category-card">
+                        <span class="cc-count">3 produtos</span>
+                        <div class="cc-icon"><i class="ph-fill ph-game-controller"></i></div>
+                        <h3>Gaming</h3>
+                        <p>Comandos PS3/PS4 e teclado + mouse para o teu setup.</p>
+                        <div class="cc-arrow"><i class="ph ph-arrow-up-right"></i></div>
+                    </a>
+                    <a href="produtos.html?cat=carga" class="category-card">
+                        <span class="cc-count">4 produtos</span>
+                        <div class="cc-icon"><i class="ph-fill ph-battery-charging"></i></div>
+                        <h3>Carregadores &amp; Cabos</h3>
+                        <p>Carregamento rápido, cabos duráveis e adaptadores.</p>
+                        <div class="cc-arrow"><i class="ph ph-arrow-up-right"></i></div>
+                    </a>
+                    <a href="produtos.html?cat=smart" class="category-card">
+                        <span class="cc-count">1 produto</span>
+                        <div class="cc-icon"><i class="ph-fill ph-watch"></i></div>
+                        <h3>Smartwatches</h3>
+                        <p>Monitoriza a saúde e acompanha as notificações no pulso.</p>
+                        <div class="cc-arrow"><i class="ph ph-arrow-up-right"></i></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="section products-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Os favoritos</span>
+                    <h2 class="section-title">Produtos em Destaque</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="products-grid" id="featuredProductsGrid"></div>
+                <div class="view-all-wrapper">
+                    <a href="produtos.html" class="btn btn-outline">Ver Todos os Produtos <i class="ph ph-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Order -->
+        <section class="how-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Simples e rápido</span>
+                    <h2 class="section-title">Como encomendar</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle">Em 3 passos tens a tua encomenda a caminho.</p>
+                </div>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-num">1</div>
+                        <h3>Escolhe os produtos</h3>
+                        <p>Navega pelo catálogo, filtra por categoria e adiciona ao carrinho.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">2</div>
+                        <h3>Adiciona observações</h3>
+                        <p>Deixa um comentário em cada produto (cor, modelo, detalhe da entrega).</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">3</div>
+                        <h3>Finaliza no WhatsApp</h3>
+                        <p>O carrinho monta a mensagem com tudo o que escolheste. Envia e pronto!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Table -->
+        <section id="precos" class="pricing-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Precário oficial</span>
+                    <h2 class="section-title">Tabela de Preços</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle">Produtos com os melhores preços da cidade.</p>
+                </div>
+                <div class="pricing-table-wrapper">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th>Nº</th>
+                                <th>Produto</th>
+                                <th class="hide-mobile">Descrição</th>
+                                <th>Preço</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>Teclado e Mouse Gamer BAJEAL T350</td><td class="hide-mobile">Setup gamer completo com iluminação RGB.</td><td><span class="price-pill">10.000 Kz</span></td></tr>
+                            <tr><td>2</td><td>Fones Bluetooth ANC/ENC</td><td class="hide-mobile">Cancelamento de ruído e som de alta qualidade.</td><td><span class="price-pill">9.500 Kz</span></td></tr>
+                            <tr><td>3</td><td>Fones Bluetooth X30</td><td class="hide-mobile">Som potente, design moderno, conforto total.</td><td><span class="price-pill">6.000 Kz</span></td></tr>
+                            <tr><td>4</td><td>AirPods ANC 4ª Geração</td><td class="hide-mobile">Cancelamento de ruído, som premium, carga rápida.</td><td><span class="price-pill">14.000 Kz</span></td></tr>
+                            <tr><td>5</td><td>Comando PS4 DualShock 4</td><td class="hide-mobile">Controle original, alta precisão, compatível com PS4.</td><td><span class="price-pill">13.500 Kz</span></td></tr>
+                            <tr><td>6</td><td>Comando PS3</td><td class="hide-mobile">Controle clássico, confortável, compatível com PS3.</td><td><span class="price-pill">6.500 Kz</span></td></tr>
+                            <tr><td>7</td><td>Fones Wireless I'm a Monster</td><td class="hide-mobile">Design moderno e som de qualidade sem fios.</td><td><span class="price-pill">8.000 Kz</span></td></tr>
+                            <tr><td>8</td><td>Smartwatch T900 Ultra 2 BIG</td><td class="hide-mobile">Tela grande, monitoramento de saúde, várias funções.</td><td><span class="price-pill">10.000 Kz</span></td></tr>
+                            <tr><td>9</td><td>Fones Bluetooth P9</td><td class="hide-mobile">Som nítido, leves, confortáveis e bateria longa.</td><td><span class="price-pill">5.000 Kz</span></td></tr>
+                            <tr><td>10</td><td>Fones de Ouvido com Fio Lightning</td><td class="hide-mobile">Áudio de qualidade compatível com iPhone.</td><td><span class="price-pill">2.000 Kz</span></td></tr>
+                            <tr><td>11</td><td>Carregador Inteligente 33W + Tipo-C</td><td class="hide-mobile">Carregamento rápido, seguro e eficiente.</td><td><span class="price-pill">3.000 Kz</span></td></tr>
+                            <tr><td>12</td><td>Cabo USB-C para Lightning 2 metros</td><td class="hide-mobile">Alta resistência e carregamento rápido, 2 metros.</td><td><span class="price-pill">2.500 Kz</span></td></tr>
+                            <tr><td>13</td><td>Carregador iPhone 17 Pro (Max) 35W</td><td class="hide-mobile">Alta potência para carga rápida de iPhone.</td><td><span class="price-pill">2.000 Kz</span></td></tr>
+                            <tr><td>14</td><td>Adaptador Wi-Fi + Bluetooth 4.0</td><td class="hide-mobile">Conexão estável e de alta velocidade.</td><td><span class="price-pill">6.500 Kz</span></td></tr>
+                            <tr><td>15</td><td>Auricular Bluetooth KL-30</td><td class="hide-mobile">Som de qualidade, confortável e bateria longa.</td><td><span class="price-pill">3.500 Kz</span></td></tr>
+                            <tr><td>16</td><td>Fones Bluetooth TWS</td><td class="hide-mobile">Sem fios, práticos e modernos, estojo de carga.</td><td><span class="price-pill">4.000 Kz</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="pricing-note">Preços válidos para pagamento à entrega ou transferência. Encomenda via carrinho + WhatsApp.</p>
+            </div>
+        </section>
+
+        <!-- Videos -->
+        <section class="videos-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Demonstrações</span>
+                    <h2 class="section-title">Em Ação</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle">Vê os nossos produtos a funcionar de verdade.</p>
+                </div>
+                <div class="videos-grid">
+                    <div class="video-card"><div class="vc-play"><i class="ph-fill ph-play"></i></div><span>Demonstração 1</span></div>
+                    <div class="video-card"><div class="vc-play"><i class="ph-fill ph-play"></i></div><span>Demonstração 2</span></div>
+                    <div class="video-card"><div class="vc-play"><i class="ph-fill ph-play"></i></div><span>Demonstração 3</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Prova social</span>
+                    <h2 class="section-title">O que dizem os clientes</h2>
+                    <div class="title-underline"></div>
+                </div>
+            </div>
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Excelente qualidade! O Comando PS3 chegou super rápido."</p>
+                        <h4>João Silva</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Os AirPods têm um som incrível, recomendo a Luenza a todos!"</p>
+                        <h4>Maria Fernandes</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★</div>
+                        <p>"Atendimento top via WhatsApp, muito prestáveis."</p>
+                        <h4>Carlos Mendes</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"O meu Smartwatch T900 é lindo, estou muito satisfeito."</p>
+                        <h4>Ana Costa</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Excelente qualidade! O Comando PS3 chegou super rápido."</p>
+                        <h4>João Silva</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Os AirPods têm um som incrível, recomendo a Luenza a todos!"</p>
+                        <h4>Maria Fernandes</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★</div>
+                        <p>"Atendimento top via WhatsApp, muito prestáveis."</p>
+                        <h4>Carlos Mendes</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"O meu Smartwatch T900 é lindo, estou muito satisfeito."</p>
+                        <h4>Ana Costa</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-inner">
+                    <span class="section-eyebrow">Vamos lá?</span>
+                    <h2>Pronto para atualizar o teu setup?</h2>
+                    <p>Escolhe os produtos, monta a encomenda no carrinho e finaliza no WhatsApp. Simples assim.</p>
+                    <div class="cta-actions">
+                        <a href="produtos.html" class="btn btn-primary">Ir para a Loja <i class="ph ph-arrow-right"></i></a>
+                        <a href="https://wa.me/244946091842?text=Ol%C3%A1%20Luenza!%20Gostaria%20de%20saber%20mais%20sobre%20os%20vossos%20produtos." target="_blank" rel="noopener" class="btn btn-whatsapp"><i class="ph ph-whatsapp-logo"></i> Falar no WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/244946091842" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Falar no WhatsApp">
+        <i class="ph-fill ph-whatsapp-logo"></i>
+    </a>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h2><i class="ph ph-shopping-cart"></i> O Seu Carrinho</h2>
+                <button class="close-btn" id="closeCartBtn" aria-label="Fechar"><i class="ph ph-x"></i></button>
+            </div>
+            <div class="cart-items" id="cartItemsContainer"></div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotalPrice">0 Kz</span>
+                </div>
+                <button class="btn-checkout" id="checkoutBtn" disabled>
+                    <i class="ph ph-whatsapp-logo"></i> Finalizar no WhatsApp
+                </button>
+                <p class="message-note">A mensagem do pedido é montada automaticamente.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contactos">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="assets/logo.jpg" alt="Luenza Logo" class="footer-logo">
+                <p>Sua Loja de Tecnologia Premium. Qualidade, preço justo e entrega rápida em Luanda.</p>
+                <div class="status-open">Luenza, sempre com você!</div>
+            </div>
+            <div class="footer-col">
+                <h3>Navegação</h3>
+                <div class="contact-item"><i class="ph ph-house"></i><a href="index.html">Início</a></div>
+                <div class="contact-item"><i class="ph ph-storefront"></i><a href="produtos.html">Loja</a></div>
+                <div class="contact-item"><i class="ph ph-receipt"></i><a href="#precos">Tabela de Preços</a></div>
+            </div>
+            <div class="footer-col footer-col-contact">
+                <h3>Fale Connosco</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/19Ny9kHyTG/" class="social-link" target="_blank" rel="noopener" aria-label="Facebook da Luenza">
+                        <i class="ph ph-facebook-logo"></i>
+                    </a>
+                    <a href="https://www.instagram.com/luenza.ao" class="social-link" target="_blank" rel="noopener" aria-label="Instagram da Luenza">
+                        <i class="ph ph-instagram-logo"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Luenza. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="app.js?v=4"></script>
+</body>
+</html>

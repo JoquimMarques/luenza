@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luenza | Catálogo de Produtos</title>
+    <meta name="description" content="Loja Luenza - Áudio, gaming, carregadores e smartwatches com os melhores preços. Encomenda pelo site e finaliza no WhatsApp.">
+    <link rel="stylesheet" href="styles.css?v=6">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <style>
+        body { margin: 0; font-family: 'Inter', Arial, sans-serif; background: #0b0d13; color: #f1f4fb; }
+        html[data-theme="light"] body { background: #eceef5; color: #171b28; }
+        h1, h2, h3, h4 { font-family: 'Space Grotesk', 'Outfit', Arial, sans-serif; }
+    </style>
+    <script>
+        try { document.documentElement.setAttribute('data-theme', localStorage.getItem('luenza_theme') || 'dark'); } catch (e) {}
+    </script>
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="container header-content">
+            <a href="index.html" class="brand">
+                <img src="assets/logo.jpg" alt="Luenza Logo" class="logo-img">
+                <span class="brand-name">LUENZA<span style="color:var(--brand);-webkit-text-fill-color:var(--brand)">.</span></span>
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html">Início</a>
+                <a href="index.html#precos">Preços</a>
+                <a href="produtos.html" class="active">Loja</a>
+                <a href="#contactos">Contactos</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                    <i class="ph ph-sun icon-sun"></i>
+                    <i class="ph ph-moon icon-moon"></i>
+                </button>
+                <button class="cart-btn" id="openCartBtn" aria-label="Abrir carrinho">
+                    <i class="ph ph-shopping-cart"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <div class="nav-items">
+            <a href="index.html" class="nav-item">
+                <i class="ph ph-house"></i>
+                <span>Início</span>
+            </a>
+            <a href="produtos.html" class="nav-item active">
+                <i class="ph ph-storefront"></i>
+                <span>Loja</span>
+            </a>
+            <a href="#" class="nav-item" id="mobileCartBtn">
+                <div class="cart-icon-wrapper">
+                    <i class="ph ph-shopping-cart"></i>
+                    <span class="cart-badge mobile-badge" id="mobileCartBadge">0</span>
+                </div>
+                <span>Carrinho</span>
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="store-head">
+            <div class="container">
+                <span class="section-eyebrow">Catálogo Luenza</span>
+                <h1 class="section-title">Todos os Produtos</h1>
+                <div class="title-underline"></div>
+                <p class="product-count" id="productCount"></p>
+            </div>
+        </section>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+            <div class="container">
+                <div class="filter-chips" id="filterChips"></div>
+                <div class="search-box">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="search" id="searchInput" placeholder="Procurar produto..."
+                           autocomplete="off" aria-label="Pesquisar produtos">
+                </div>
+            </div>
+        </div>
+
+        <section class="store-grid">
+            <div class="container">
+                <div class="products-grid" id="allProductsGrid"></div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-inner">
+                    <span class="section-eyebrow">Dúvidas?</span>
+                    <h2>Não encontraste o que querias?</h2>
+                    <p>Fala connosco no WhatsApp e nós ajudamos-te a escolher o produto ideal.</p>
+                    <div class="cta-actions">
+                        <a href="https://wa.me/244946091842?text=Ol%C3%A1%20Luenza!%20Gostaria%20de%20saber%20mais%20sobre%20os%20vossos%20produtos." target="_blank" rel="noopener" class="btn btn-whatsapp"><i class="ph ph-whatsapp-logo"></i> Falar no WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/244946091842" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Falar no WhatsApp">
+        <i class="ph-fill ph-whatsapp-logo"></i>
+    </a>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h2><i class="ph ph-shopping-cart"></i> O Seu Carrinho</h2>
+                <button class="close-btn" id="closeCartBtn" aria-label="Fechar"><i class="ph ph-x"></i></button>
+            </div>
+            <div class="cart-items" id="cartItemsContainer"></div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotalPrice">0 Kz</span>
+                </div>
+                <button class="btn-checkout" id="checkoutBtn" disabled>
+                    <i class="ph ph-whatsapp-logo"></i> Finalizar no WhatsApp
+                </button>
+                <p class="message-note">A mensagem do pedido é montada automaticamente.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contactos">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="assets/logo.jpg" alt="Luenza Logo" class="footer-logo">
+                <p>Sua Loja de Tecnologia Premium. Qualidade, preço justo e entrega rápida em Luanda.</p>
+                <div class="status-open">Luenza, sempre com você!</div>
+            </div>
+            <div class="footer-col">
+                <h3>Navegação</h3>
+                <div class="contact-item"><i class="ph ph-house"></i><a href="index.html">Início</a></div>
+                <div class="contact-item"><i class="ph ph-storefront"></i><a href="produtos.html">Loja</a></div>
+                <div class="contact-item"><i class="ph ph-receipt"></i><a href="index.html#precos">Tabela de Preços</a></div>
+            </div>
+            <div class="footer-col footer-col-contact">
+                <h3>Fale Connosco</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/19Ny9kHyTG/" class="social-link" target="_blank" rel="noopener" aria-label="Facebook da Luenza">
+                        <i class="ph ph-facebook-logo"></i>
+                    </a>
+                    <a href="https://www.instagram.com/luenza.ao" class="social-link" target="_blank" rel="noopener" aria-label="Instagram da Luenza">
+                        <i class="ph ph-instagram-logo"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Luenza. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="app.js?v=4"></script>
+</body>
+</html>
