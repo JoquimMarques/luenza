@@ -1217,7 +1217,7 @@ html[data-theme="light"] .theme-toggle .icon-sun {
     flex-direction: column;
     background: var(--card);
     border: 1px solid var(--border);
-    border-radius: var(--radius-xl);
+    border-radius: 16px;
     overflow: hidden;
     transition: transform 0.32s ease, border-color 0.32s ease, box-shadow 0.32s ease;
     animation: fadeUp 0.45s ease both;
@@ -2385,9 +2385,9 @@ footer {
     }
 
     .category-card .cc-icon {
-        width: 46px;
-        height: 46px;
-        font-size: 1.45rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
     }
 
     .category-card h3 {
@@ -2405,10 +2405,10 @@ footer {
     }
 
     .cc-count {
-        top: 14px;
-        right: 14px;
-        font-size: 0.66rem;
-        padding: 3px 8px;
+        top: 18px;
+        right: 12px;
+        font-size: 0.62rem;
+        padding: 4px 9px;
     }
 
     .products-grid {
@@ -2513,9 +2513,8 @@ footer {
     }
 
     .testimonial-card {
-        width: 260px;
-        padding: 22px;
-        margin-right: 0;
+        width: 270px;
+        padding: 24px;
     }
 
     .testimonial-card p {
