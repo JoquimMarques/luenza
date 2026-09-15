@@ -2374,6 +2374,56 @@ footer {
         letter-spacing: 2px;
     }
 
+    .store-head {
+        padding-top: calc(var(--nav-h-mobile) + 26px);
+        padding-bottom: 20px;
+    }
+
+    .store-head .section-eyebrow {
+        font-size: 0.62rem;
+        letter-spacing: 1.8px;
+        margin-bottom: 6px;
+    }
+
+    .store-head .section-title {
+        font-size: 1.3rem;
+    }
+
+    .store-head .title-underline {
+        margin-top: 10px;
+    }
+
+    .product-count {
+        font-size: 0.8rem;
+        margin-top: 10px;
+    }
+
+    .filter-bar .container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        gap: 12px;
+    }
+
+    .filter-chips {
+        gap: 8px;
+    }
+
+    .chip {
+        padding: 8px 14px;
+        font-size: 0.78rem;
+        font-weight: 700;
+    }
+
+    .search-box input {
+        padding: 11px 14px 11px 40px;
+        font-size: 0.86rem;
+    }
+
+    .search-box i {
+        left: 14px;
+        font-size: 1rem;
+    }
+
     .categories-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 14px;
@@ -2393,12 +2443,14 @@ footer {
 
     .category-card h3 {
         order: 3;
-        font-size: 1rem;
+        font-size: 0.9rem;
+        line-height: 1.25;
     }
 
     .category-card p {
         order: 4;
-        font-size: 0.78rem;
+        font-size: 0.7rem;
+        line-height: 1.4;
     }
 
     .cc-arrow {
@@ -2412,8 +2464,8 @@ footer {
         position: static;
         order: 2;
         align-self: flex-start;
-        font-size: 0.6rem;
-        padding: 3px 10px;
+        font-size: 0.56rem;
+        padding: 3px 9px;
         margin: -4px 0 0;
     }
 
