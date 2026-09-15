@@ -2385,30 +2385,36 @@ footer {
     }
 
     .category-card .cc-icon {
+        order: 1;
         width: 40px;
         height: 40px;
         font-size: 1.3rem;
     }
 
     .category-card h3 {
+        order: 3;
         font-size: 1rem;
     }
 
     .category-card p {
+        order: 4;
         font-size: 0.78rem;
     }
 
     .cc-arrow {
+        order: 5;
         width: 34px;
         height: 34px;
         font-size: 0.95rem;
     }
 
     .cc-count {
-        top: 18px;
-        right: 12px;
-        font-size: 0.62rem;
-        padding: 4px 9px;
+        position: static;
+        order: 2;
+        align-self: flex-start;
+        font-size: 0.6rem;
+        padding: 3px 10px;
+        margin: -4px 0 0;
     }
 
     .products-grid {
@@ -2513,8 +2519,27 @@ footer {
     }
 
     .testimonial-card {
-        width: 270px;
-        padding: 24px;
+        width: 240px;
+        padding: 20px;
+    }
+
+    .testimonial-card p {
+        font-size: 0.9rem;
+        margin-bottom: 14px;
+    }
+
+    .testimonial-card .stars {
+        font-size: 0.92rem;
+        margin-bottom: 10px;
+    }
+
+    .testimonial-card h4 {
+        font-size: 0.88rem;
+    }
+
+    .testimonial-card h4::before {
+        width: 28px;
+        height: 28px;
     }
 
     .testimonial-card p {
